@@ -1,0 +1,64 @@
+.container {
+    height : 100vh;
+    background : no-repeat center;
+    background-size:cover;
+    display : flex;
+    flex-direction: column;
+}
+
+.top {
+    display:flex;
+    align-items:center;
+    background-color : black;
+    flex : 3;
+}
+
+.topTitle {
+    margin-left : 2vw;
+    font-family: "Bebas Neue", sans-serif;
+    font-size : 1vw;
+    color : red;
+}
+
+.center{
+    display:flex;
+    flex-direction : row;
+    justify-content:space-around;
+    background-color : green;
+    flex : 7;
+    flex-wrap: wrap;
+}
+
+.card{
+    height : 60vh;
+    width : 30vw;
+    margin : 1vh 1vw 1vh 1vw;
+}
+
+.cardBackground{
+    display:flex;
+    flex-direction : column;
+    align-items:center;
+    height : 60vh;
+    width : 30vw;
+    background-repeat: no-repeat;
+    background : center;
+    background-size: cover;
+}
+
+.title{
+    color : white;
+    font-family: "Bebas Neue", sans-serif;
+    margin : 1vh 1vw 1vh 1vw;
+    font-size : 2em;
+}
+
+.overview{
+    color : white;
+    margin : 1vh 1vw 1vh 1vw;
+}
+
+.star{
+    color : white;
+    align-content: end;
+}
