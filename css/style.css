@@ -8,9 +8,14 @@
 
 .top {
     display:flex;
-    align-items:center;
+    align-content: center;
     background-color : black;
     flex : 3;
+}
+
+.topContent{
+    display: flex;
+    justify-content: end;
 }
 
 .topTitle {

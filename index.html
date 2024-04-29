@@ -13,33 +13,20 @@
     </style>
 
     <script>
-
-        const options = {
-            method: 'GET',
-            headers: {
-                accept: 'application/json',
-                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhOTJlZDFjNTJkOTRjZjBiZDAxZWM5MDdlYjVkZjVlMSIsInN1YiI6IjY2MmI0OGNkMDFiMWNhMDExY2UzZjE4OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.kfsG0XrqjvjEinnMIHAGVtd7WbxUFpXPKj_CF_M-k08'
-            }
-        };
-        const response = fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
-            .then((response) => response.json())
-            .then((json)=>{
-                data=json.results;
-
-                data.forEach(movie => {
-                    makeMovieCard(`${movie['title']}`,`${movie['overview']}`,`${movie['poster_path']}`,`${movie['vote_average']}`);
-                });    
-            })
-            .catch(err => console.error(err));
-
-        
+        callMovieData();
     </script>
 </head>
 
 <body>
     <div class="container">
         <div class="top">
-            <p class="topTitle">DONGFLIX</p>
+            <div class="topContent">
+                <p class="topTitle">DONGFLIX</p>
+                <div class="searchBox">
+                    <p>search</p>
+                </div>
+            </div>
+            
         </div>
         <div class="center">
         </div>
