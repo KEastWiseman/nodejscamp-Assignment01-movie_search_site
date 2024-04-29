@@ -15,21 +15,45 @@
 
 .topContent{
     display: flex;
-    justify-content: end;
+    align-content: center;
 }
 
 .topTitle {
     margin-left : 2vw;
+    margin-right : 2vw;
+    font-family: "Bebas Neue", sans-serif;
+    font-size : 2vw;
+    color : red;
+}
+
+.searchBox{
+    padding : 2vw;
+    display: flex;
+    height: 3vh;
+    align-content: center;
+}
+
+.inputBox{
+    background-color: gray;
+    width: 20vw;
     font-family: "Bebas Neue", sans-serif;
     font-size : 1vw;
-    color : red;
+    color : white;
+}
+
+.searchBtn{
+    margin-left: 1vw;
+    background-color: red;
+    font-family: "Bebas Neue", sans-serif;
+    font-size : 1vw;
+    color : Black;
 }
 
 .center{
     display:flex;
     flex-direction : row;
     justify-content:space-around;
-    background-color : green;
+    background-color : rgba(0, 0, 0, 0.623);
     flex : 7;
     flex-wrap: wrap;
 }

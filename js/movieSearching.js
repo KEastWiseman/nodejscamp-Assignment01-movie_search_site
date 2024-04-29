@@ -32,6 +32,7 @@ function makeMovieCard(title, overView, image, star, id) {
 
 
 function callMovieData(title){
+    
     const options = {
         method: 'GET',
         headers: {
@@ -43,11 +44,25 @@ function callMovieData(title){
         .then((response) => response.json())
         .then((json)=>{
             data=json.results;
-
+            document.querySelector(".container > .center").innerHTML=``;
             data.forEach(movie => {
-                console.log(`${movie['title']} ?? ${title}`)
-                makeMovieCard(`${movie['title']}`,`${movie['overview']}`,`${movie['poster_path']}`,`${movie['vote_average']}`,`${movie['id']}`);
-            });    
+                console.log(title);
+                if(title){
+                    if(movie['title'].toUpperCase().includes(title)){
+                        makeMovieCard(`${movie['title']}`,`${movie['overview']}`,`${movie['poster_path']}`,`${movie['vote_average']}`,`${movie['id']}`);
+                    }
+                }
+                else {
+                    makeMovieCard(`${movie['title']}`,`${movie['overview']}`,`${movie['poster_path']}`,`${movie['vote_average']}`,`${movie['id']}`);
+                }
+                
+            });  
         })
         .catch(err => console.error(err));
+    
+    }
+
+function searchMovie(){
+    let searchTargetTitle = (document.querySelector(".inputBox").value).toUpperCase();
+    callMovieData(searchTargetTitle);
 }
